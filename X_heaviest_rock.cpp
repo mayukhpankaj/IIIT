@@ -1,7 +1,3 @@
-// C++ program to sort Vector
-// in descending order
-// using sort() in STL
-
 #include <bits/stdc++.h>
 using namespace std;
 

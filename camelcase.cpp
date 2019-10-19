@@ -5,37 +5,47 @@ using namespace std;
 int main()
 {
 
-
-  char text[200];
-  vector<int> u;
-  int i=0,y;
-
-
-  cin.getline(text, 200);
+string str;
+vector<int> u;
+int y;
 
 
-  for(i=0;i<199;i++)
-  {
-      if(text[i]=='_')
+getline(cin,str);    //enter string
+
+
+
+int l = str.length();
+    for (int i = 0; i < l; i++)
+{
+
+      if(str[i]=='_')
       {
           u.push_back(i);
       }
 
+}
 
-  }
 
-  for (int j = 0; j < u.size(); j++)
+
+       for (int j = 0; j < u.size(); j++)
   {
       y=u[j]+1;
 
-      text[y]=toupper(text[y]);
+      str[y]=toupper(str[y]);
+
+}
+
+
+
+
+  for (int j = 0; j < u.size(); j++)
+  {
+
+      str.erase(u[j],1);
+
 
   }
 
-   cout<<text;
 
-
-
-  return 0;
-
+cout<<str;
 }
